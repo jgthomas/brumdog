@@ -28,14 +28,19 @@ def get_db(db_name):
     return Database(db_name)
 
 
+def build_image_url(image):
+    if image is None:
+        image_url = "".join([URL, IMAGES, set_image_name(name), FILETYPE])
+    else:
+        image_url = "".join([URL, IMAGES, set_image_name(image), FILETYPE])
+    return image_url
+
+
 def add_pub(db_name, name, description, rating, image=None):
     db = get_db(db_name)
     db.execute(CREATE_DOG_PUBS)
-    if image is None:
-        image = "".join([URL, IMAGES, set_image_name(name), FILETYPE])
-    else:
-        image = "".join([URL, IMAGES, set_image_name(image), FILETYPE])
-    db.execute(INSERT_PUB, name, description, rating, image)
+    image_url = build_image_url(image)
+    db.execute(INSERT_PUB, name, description, rating, image_url)
 
 
 '''
