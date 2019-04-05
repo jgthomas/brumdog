@@ -1,10 +1,11 @@
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Listing from './Listing';
 
-import './Listings.css';
 import './App.css';
+import './Listings.css';
 
 class Listings extends Component {
 
