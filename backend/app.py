@@ -120,9 +120,10 @@ def update_details():
         return render_template("form_prefilled.html", **checked, **pub_details)
 
 
+'''
+Deals with requests for pub data from the frontend
 
-
-
+'''
 @app.route('/load', methods=["GET"])
 def load():
     db = get_db("brumdog.db")
