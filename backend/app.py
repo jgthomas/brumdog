@@ -135,8 +135,6 @@ def load():
     return jsonify(pubs)
 
 
-
-
 #@app.route('/add')
 #def add_db_pubs():
 #    add_pub("brumdog.db",
