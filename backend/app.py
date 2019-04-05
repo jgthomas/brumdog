@@ -99,8 +99,12 @@ def update():
     return render_template("edit_list.html", pubs=all_pubs)
 
 
-@app.route('/update_details', methods=["POST"])
-def update_details():
+'''
+Displays the existing pub details in a pre-filled form
+
+'''
+@app.route('/pub_details', methods=["POST"])
+def pub_details():
     if request.method == "POST":
         pub_id = int(request.form.get("pub_pick"))
         db = get_db("brumdog.db")

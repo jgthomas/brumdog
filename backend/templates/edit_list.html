@@ -7,7 +7,7 @@
   </head>
   <body>
     <h2 class="form-header">Edit Menu</h2>
-      <form action="http://127.0.0.1:5000/update_details" method="post" enctype='multipart/form-data'>
+      <form action="http://127.0.0.1:5000/pub_details" method="post" enctype='multipart/form-data'>
         <select name="pub_pick">
           {% for pub in pubs %}
           <option value="{{ pub.id }}">{{ pub.name }}</option>
