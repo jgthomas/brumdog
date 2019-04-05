@@ -20,8 +20,6 @@ FILETYPE = ".jpg"
 UPLOAD_FOLDER = "static/images/"
 
 
-
-
 def set_image_name(name):
     return "".join(name.split()).lower()
 
