@@ -1,7 +1,8 @@
+
 import React, { Component } from 'react';
 
-import Listings from './Listings';
 import Rating from './Rating';
+import Listings from './Listings';
 
 const getURL = "http://localhost:5000/load";
 
