@@ -99,13 +99,6 @@ def update():
     return render_template("edit_list.html", pubs=all_pubs)
 
 
-@app.route('/update_entry', methods=["GET", "POST"])
-def update_entry():
-    if request.method == "POST":
-       return redirect(url_for("edit"))
-    return redirect(url_for("edit"))
-
-
 @app.route('/update_details', methods=["POST"])
 def update_details():
     if request.method == "POST":
@@ -126,6 +119,13 @@ def load():
     pubs = db.execute(SELECT_ALL_PUBS)
     pubs = {pub["id"]: pub for pub in pubs}
     return jsonify(pubs)
+
+
+#@app.route('/update_entry', methods=["GET", "POST"])
+#def update_entry():
+#    if request.method == "POST":
+#       return redirect(url_for("edit"))
+#    return redirect(url_for("edit"))
 
 
 #@app.route('/add')
