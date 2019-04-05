@@ -20,7 +20,6 @@ FILETYPE = ".jpg"
 UPLOAD_FOLDER = "static/images/"
 
 
-ratings = {"tolerated": 1, "welcomed": 2, "loved": 3}
 
 
 def set_image_name(name):
@@ -62,6 +61,8 @@ Sub-form for submitting a new pub
 '''
 @app.route('/add', methods=["GET", "POST"])
 def add():
+    ratings = {"tolerated": 1, "welcomed": 2, "loved": 3}
+
     if request.method == "POST":
         name = None
         rating = None
