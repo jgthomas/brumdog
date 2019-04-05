@@ -1,0 +1,30 @@
+
+.rating-box {
+}
+
+.rating-title {
+}
+
+.rating-text {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+        color: cornflowerblue;
+}
+
+.rating-icons {
+        text-align: right;
+        margin-right: 1%;
+        font-weight: bold;
+        font-size: 120%;
+}
+
+
+.rating-description {
+        text-align: left;
+        font-size: 110%;
+}
+
+.rating-text ul {
+        list-style: none;
+}

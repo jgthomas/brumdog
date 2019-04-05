@@ -1,0 +1,57 @@
+
+@font-face {
+        font-family: 'Dingbats';
+        font-style: normal;
+        src: url('../fonts/animal_tracks.ttf') format('truetype');
+}
+
+.navigation-button {
+        text-align: center;
+}
+
+
+.content-box {
+        width: 100%;
+        margin: auto;
+}
+
+
+.content-title {
+        color: cornflowerblue;
+        text-align: center;
+}
+
+
+.emphasise {
+        font-weight: bold;
+}
+
+
+.dog-paw {
+        font-family: 'Dingbats';
+}
+
+
+@media only screen and (min-width: 1280px) {
+        .content-box {
+                width: 70%;
+        }
+}
+
+@media only screen and (min-width: 1600px) {
+        .content-box {
+                width: 60%;
+        }
+}
+
+@media only screen and (min-width: 1920px) {
+        .content-box {
+                width: 50%;
+        }
+}
+
+@media only screen and (min-width: 2450px) {
+        .content-box {
+                width: 40%;
+        }
+}

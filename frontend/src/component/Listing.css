@@ -1,0 +1,31 @@
+
+.listing-box {
+        border: 2px solid slategrey;
+        border-radius: 5px;
+        background-color: cornsilk;
+}
+
+.listing-title {
+}
+
+.listing-more-button {
+}
+
+.rating {
+        font-weight: bold;
+        text-align: center;
+        color: cornflowerblue;
+        font-size: 120%;
+}
+
+img {
+        display: block;
+        width: 80%;
+        margin: auto;
+        height: auto;
+}
+
+.description {
+        margin-left: 3%;
+        margin-right: 3%;
+}

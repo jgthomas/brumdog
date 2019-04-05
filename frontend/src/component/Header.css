@@ -1,0 +1,22 @@
+
+.page-title {
+        text-align: center;
+        color: cornflowerblue;
+        background-color: ivory;
+        font-size: 3em;
+}
+
+
+.tagline {
+        text-align: center;
+        color: cornflowerblue;
+        background-color: ivory;
+        font-size: 1.15em;
+        margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 680px) {
+        .tagline {
+                margin-bottom: 0.5em;
+        }
+}
