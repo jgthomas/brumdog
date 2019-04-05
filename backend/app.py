@@ -108,7 +108,14 @@ def pub_details():
         pub_id = int(request.form.get("pub_pick"))
         db = get_db("brumdog.db")
         pub_details = db.execute(SELECT_BY_ID, pub_id)[0]
-        checked = dict(toleratedchecked="no", welcomedchecked="no", lovedchecked="checked")
+        print(pub_details)
+        checked = dict(toleratedchecked="no", welcomedchecked="no", lovedchecked="no")
+        if pub_details["rating"] == 1:
+            checked["toleratedchecked"] = "checked"
+        elif pub_details["rating"] == 2:
+            checked["welcomedchecked"] = "checked"
+        elif pub_details["rating"] == 3:
+            checked["lovedchecked"] = "checked"
         return render_template("form_prefilled.html", **checked, **pub_details)
 
 
