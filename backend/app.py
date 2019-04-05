@@ -65,14 +65,11 @@ def update():
     db = get_db("brumdog.db")
     all_pubs = db.execute(SELECT_ALL_NAME)
     return render_template("edit_list.html", pubs=all_pubs)
-    #checked = dict(toleratedchecked="no", welcomedchecked="no", lovedchecked="checked")
-    #return render_template("form_prefilled.html", **checked)
 
 
 @app.route('/update_entry', methods=["GET", "POST"])
 def update_entry():
     if request.method == "POST":
-       print(request.form.get("pub_pick"))
        return redirect(url_for("edit"))
     return redirect(url_for("edit"))
 
@@ -83,14 +80,7 @@ def update_details():
         pub_id = int(request.form.get("pub_pick"))
         db = get_db("brumdog.db")
         pub_details = db.execute(SELECT_BY_ID, pub_id)[0]
-        print(pub_details)
         checked = dict(toleratedchecked="no", welcomedchecked="no", lovedchecked="checked")
-        #if pub_details.rating == "tolerated":
-        #    checked.toleratedchecked = "checked"
-        #elif pub_details.rating == "welcomed":
-        #    checked.welcomedchecked = "checked"
-        #elif pub_details.rating == "loved":
-        #    checked.lovedchecked = "checked"
         return render_template("form_prefilled.html", **checked, **pub_details)
 
 
