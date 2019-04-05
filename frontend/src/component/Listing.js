@@ -13,6 +13,7 @@ class Listing extends Component {
              <h1 className="content-title listing-title">{this.props.name}</h1>
              <img src={this.props.imageName} alt="Pub Front"/>
              <p className="rating dog-paw">{"D".repeat(this.props.rating)}</p>
+             <p className="description">{this.props.description}</p>
           </div>
         );
     }
@@ -22,6 +23,7 @@ Listing.propTypes = {
     name: PropTypes.string,
     rating: PropTypes.number,
     imageName: PropTypes.string,
+    description : PropTypes.string,
     setId: PropTypes.func,
 };
 
