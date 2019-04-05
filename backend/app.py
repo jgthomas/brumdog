@@ -54,12 +54,12 @@ def edit():
         if action == "add":
             return redirect(url_for("submit_pub"))
         if action == "update":
-            return redirect(url_for("update_pub"))
+            return redirect(url_for("update"))
     return render_template("edit.html")
 
 
 @app.route('/update', methods=["GET", "POST"])
-def update_pub():
+def update():
     if request.method == "POST":
         pass
     db = get_db("brumdog.db")
