@@ -45,8 +45,10 @@ def add_pub(db_name, name, description, rating, image=None):
 def index():
     return "Hello, World!"
 
+'''
+Top-level edit menu
 
-# top-level edit menu
+'''
 @app.route('/edit', methods=["GET", "POST"])
 def edit():
     if request.method == "POST":
@@ -58,6 +60,40 @@ def edit():
     return render_template("edit.html")
 
 
+'''
+Sub-form for submitting a new pub
+
+'''
+@app.route('/add', methods=["GET", "POST"])
+def add():
+    if request.method == "POST":
+        name = None
+        rating = None
+        description = None
+        image_name = "placeholder"
+
+        if request.form.get("name"):
+            name = request.form.get("name")
+
+        if request.form.get("description"):
+            description = request.form.get("description")
+
+        if request.form.get("rating"):
+            rating = ratings[request.form.get("rating")]
+
+        #if 'image' in request.files:
+        #    image_file = request.files['image']
+        #    image_name = set_image_name(name)
+
+        if name and (rating and description):
+            add_pub("brumdog.db", name, description, rating, image_name)
+    return render_template("form.html")
+
+
+'''
+Sub-form for updating an existing pub
+
+'''
 @app.route('/update', methods=["GET", "POST"])
 def update():
     if request.method == "POST":
@@ -85,30 +121,6 @@ def update_details():
 
 
 
-@app.route('/add', methods=["GET", "POST"])
-def add():
-    if request.method == "POST":
-        name = None
-        rating = None
-        description = None
-        image_name = "placeholder"
-
-        if request.form.get("name"):
-            name = request.form.get("name")
-
-        if request.form.get("description"):
-            description = request.form.get("description")
-
-        if request.form.get("rating"):
-            rating = ratings[request.form.get("rating")]
-
-        #if 'image' in request.files:
-        #    image_file = request.files['image']
-        #    image_name = set_image_name(name)
-
-        if name and (rating and description):
-            add_pub("brumdog.db", name, description, rating, image_name)
-    return render_template("form.html")
 
 
 @app.route('/load', methods=["GET"])
