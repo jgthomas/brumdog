@@ -8,7 +8,8 @@ from queries import (CREATE_DOG_PUBS,
                      INSERT_PUB,
                      SELECT_ALL_PUBS,
                      SELECT_ALL_NAME,
-                     SELECT_BY_ID)
+                     SELECT_BY_ID,
+                     UPDATE_PUB)
 
 app = Flask(__name__)
 CORS(app)
