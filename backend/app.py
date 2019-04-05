@@ -87,7 +87,7 @@ def add():
 
 
 '''
-Sub-form for updating an existing pub
+Sub-form for selecting an existing pub to update
 
 '''
 @app.route('/update', methods=["GET", "POST"])
