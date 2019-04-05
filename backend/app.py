@@ -114,6 +114,17 @@ def pub_details():
 
 
 '''
+TODO: Submits updated pub details to the database
+
+'''
+@app.route('/update_pub_details', methods=["GET", "POST"])
+def update_pub_details():
+    if request.method == "POST":
+       return redirect(url_for("edit"))
+    return redirect(url_for("edit"))
+
+
+'''
 Deals with requests for pub data from the frontend
 
 '''
@@ -125,11 +136,6 @@ def load():
     return jsonify(pubs)
 
 
-#@app.route('/update_entry', methods=["GET", "POST"])
-#def update_entry():
-#    if request.method == "POST":
-#       return redirect(url_for("edit"))
-#    return redirect(url_for("edit"))
 
 
 #@app.route('/add')
