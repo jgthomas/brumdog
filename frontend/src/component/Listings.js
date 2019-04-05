@@ -18,7 +18,6 @@ class Listings extends Component {
                         imageName={pub.imageName}
                         pubId={pub.id}
                         key={pub.id}
-                        setId={this.props.setId}
                     />;
                 })}
             </div>

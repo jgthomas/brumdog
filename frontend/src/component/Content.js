@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Listings from './Listings';
-//import PubPage from './PubPage';
 import Rating from './Rating';
 
 const getURL = "http://localhost:5000/load";
@@ -13,16 +12,7 @@ class Content extends Component {
 
         this.state = {
             pubs: {},
-            allPubs: -1,
-            pubId: -1,
         };
-
-        this.setPubId = this.setPubId.bind(this);
-
-    }
-
-    setPubId(id) {
-        this.setState({pubId: id})
     }
 
     componentDidMount() {
@@ -35,8 +25,7 @@ class Content extends Component {
         return (
             <div>
                 <Rating />
-                <Listings setId={this.setPubId.bind(this)}
-                          pubs={Object.values(this.state.pubs)} />
+                <Listings pubs={Object.values(this.state.pubs)} />
             </div>
         );
     }
