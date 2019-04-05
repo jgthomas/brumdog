@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import './App.css';
 import './Rating.css';
 
-
 class Rating extends Component {
     render() {
         return (
