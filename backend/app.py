@@ -14,7 +14,7 @@ from queries import (CREATE_DOG_PUBS,
 app = Flask(__name__)
 CORS(app)
 
-URL = "http://127.0.0.1:5000/"
+URL = "http://192.168.0.16:5000/"
 IMAGES = "static/images/"
 FILETYPE = ".jpg"
 

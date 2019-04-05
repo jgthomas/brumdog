@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Rating from './Rating';
 import Listings from './Listings';
 
-const getURL = "http://localhost:5000/load";
+const getURL = "http://192.168.0.16:5000/load";
 
 class Content extends Component {
 
@@ -17,7 +17,7 @@ class Content extends Component {
     }
 
     componentDidMount() {
-        fetch(getURL)
+        fetch(getURL, { method: 'GET', mode: 'cors' })
             .then(response => response.json())
             .then(data => this.setState( { pubs: data } ));
     }
