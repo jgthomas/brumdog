@@ -24,7 +24,6 @@ Listing.propTypes = {
     rating: PropTypes.number,
     imageName: PropTypes.string,
     description : PropTypes.string,
-    setId: PropTypes.func,
 };
 
 export default Listing;

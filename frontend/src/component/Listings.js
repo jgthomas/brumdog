@@ -18,7 +18,6 @@ class Listings extends Component {
                         rating={pub.rating}
                         imageName={pub.imageName}
                         description={pub.description}
-                        pubId={pub.id}
                         key={pub.id}
                     />;
                 })}
