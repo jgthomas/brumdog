@@ -121,29 +121,31 @@ def submit():
     return render_template("form.html")
 
 
-@app.route('/add')
-def add_db_pubs():
-    add_pub("brumdog.db",
-            "Pug-on-Tap",
-            "A quaint, old-time boozer where the only thing to fear is the locals",
-            1)
-    add_pub("brumdog.db",
-            "Horse and Hound",
-            "Avoid the food, I'm sure your dog will like it though!",
-            2)
-    return "Done!"
-
-
-@app.route('/show', methods=["GET"])
-def show_db_pubs():
-    db = get_db("brumdog.db")
-    p = db.execute(SELECT_ALL_PUBS)
-    return jsonify(p)
-
-
 @app.route('/load', methods=["GET"])
-def get_pubs():
+def load():
     db = get_db("brumdog.db")
     pubs = db.execute(SELECT_ALL_PUBS)
     pubs = {pub["id"]: pub for pub in pubs}
     return jsonify(pubs)
+
+
+#@app.route('/add')
+#def add_db_pubs():
+#    add_pub("brumdog.db",
+#            "Pug-on-Tap",
+#            "A quaint, old-time boozer where the only thing to fear is the locals",
+#            1)
+#    add_pub("brumdog.db",
+#            "Horse and Hound",
+#            "Avoid the food, I'm sure your dog will like it though!",
+#            2)
+#    return "Done!"
+#
+#
+#@app.route('/show', methods=["GET"])
+#def show_db_pubs():
+#    db = get_db("brumdog.db")
+#    p = db.execute(SELECT_ALL_PUBS)
+#    return jsonify(p)
+
+
