@@ -20,3 +20,10 @@ SELECT_ALL_NAME = """SELECT id,name
 SELECT_BY_ID = """SELECT *
                     FROM dog_pubs
                    WHERE id=?"""
+
+UPDATE_PUB = """UPDATE dog_pubs
+                   SET name=?,
+                       description=?,
+                       rating=?,
+                       imageName=?
+                 WHERE id=?"""
