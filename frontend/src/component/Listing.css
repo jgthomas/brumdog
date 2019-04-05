@@ -1,12 +1,16 @@
 
 .listing-box {
-        /*border: 2px solid slategrey;*/
+        border: 2px solid slategrey;
         border-radius: 5px;
         background-color: white;
-        box-shadow: 10px;
+        border-width: 20px;
+        border-image: url("../assets/bone-border.png") 8% 8% round;
+        border-color: white;
 }
 
 .listing-title {
+        color: #FF4C3B;
+        color: dodgerblue;
 }
 
 .listing-more-button {
