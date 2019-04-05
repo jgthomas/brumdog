@@ -41,10 +41,6 @@ def add_pub(db_name, name, description, rating, image=None):
     db.execute(INSERT_PUB, name, description, rating, image)
 
 
-@app.route('/')
-def index():
-    return "Hello, World!"
-
 '''
 Top-level edit menu
 
