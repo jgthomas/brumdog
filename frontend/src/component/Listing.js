@@ -1,8 +1,9 @@
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './Listing.css';
 import './App.css';
+import './Listing.css';
 
 class Listing extends Component {
 
