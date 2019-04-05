@@ -2,7 +2,9 @@
 .page-title {
         text-align: center;
         color: cornflowerblue;
-        background-color: ivory;
+        color: #06425C;
+        color: #FF4C3B;
+        color: dodgerblue;
         font-size: 3em;
 }
 
@@ -10,7 +12,9 @@
 .tagline {
         text-align: center;
         color: cornflowerblue;
-        background-color: ivory;
+        color: #06425C;
+        color: #FF4C3B;
+        color: dodgerblue;
         font-size: 1.15em;
         margin-bottom: 0.5em;
 }

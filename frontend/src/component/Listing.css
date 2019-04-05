@@ -1,8 +1,9 @@
 
 .listing-box {
-        border: 2px solid slategrey;
+        /*border: 2px solid slategrey;*/
         border-radius: 5px;
-        background-color: cornsilk;
+        background-color: white;
+        box-shadow: 10px;
 }
 
 .listing-title {
@@ -15,6 +16,7 @@
         font-weight: bold;
         text-align: center;
         color: cornflowerblue;
+        color: #E45641;
         font-size: 120%;
 }
 
