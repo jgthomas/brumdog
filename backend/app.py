@@ -52,7 +52,7 @@ def edit():
     if request.method == "POST":
         action = request.form.get("edit")
         if action == "add":
-            return redirect(url_for("submit_pub"))
+            return redirect(url_for("submit"))
         if action == "update":
             return redirect(url_for("update"))
     return render_template("edit.html")
@@ -96,7 +96,7 @@ def update_details():
 
 
 @app.route('/submit', methods=["GET", "POST"])
-def submit_pub():
+def submit():
     if request.method == "POST":
         name = None
         rating = None
