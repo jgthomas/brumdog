@@ -20,6 +20,8 @@ FILETYPE = ".jpg"
 
 UPLOAD_FOLDER = "static/images/"
 
+ratings = {"tolerated": 1, "welcomed": 2, "loved": 3}
+
 
 def set_image_name(name):
     return "".join(name.split()).lower()
@@ -44,6 +46,12 @@ def add_pub(db_name, name, description, rating, image=None):
     db.execute(INSERT_PUB, name, description, rating, image_url)
 
 
+def update_pub(db_name, pub_id, name, description, rating, image=None):
+    db = get_db(db_name)
+    image_url = build_image_url(image)
+    db.execute(UPDATE_PUB, name, description, rating, image_url, pub_id);
+
+
 '''
 Top-level edit menu
 
@@ -65,8 +73,6 @@ Sub-form for submitting a new pub
 '''
 @app.route('/add', methods=["GET", "POST"])
 def add():
-    ratings = {"tolerated": 1, "welcomed": 2, "loved": 3}
-
     if request.method == "POST":
         name = None
         rating = None
@@ -131,7 +137,23 @@ TODO: Submits updated pub details to the database
 @app.route('/update_pub_details', methods=["GET", "POST"])
 def update_pub_details():
     if request.method == "POST":
-       return redirect(url_for("edit"))
+        name = None
+        rating = None
+        description = None
+        image_name = "placeholder"
+        pub_id = int(request.form.get("pub_id"))
+
+        if request.form.get("name"):
+            name = request.form.get("name")
+
+        if request.form.get("description"):
+            description = request.form.get("description")
+
+        if request.form.get("rating"):
+            rating = ratings[request.form.get("rating")]
+
+        if name and (rating and description):
+            update_pub("brumdog.db", pub_id, name, description, rating, image_name)
     return redirect(url_for("edit"))
 
 
