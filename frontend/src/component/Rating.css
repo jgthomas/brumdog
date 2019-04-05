@@ -1,8 +1,12 @@
 
 .rating-box {
+        margin-top: 3em;
+        text-align: center;
 }
 
-.rating-title {
+.rating-levels {
+        color: #FF4C3B;
+        font-weight: normal;
 }
 
 .rating-text {

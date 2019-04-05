@@ -8,6 +8,7 @@ class Rating extends Component {
     render() {
         return (
             <div className="content-box rating-box">
+                <p className="rating-levels">Our paw scale of dog-friendliness</p>
                 <div className="rating-text">
                     <div className="rating-icons">
                         <p className="dog-paw">D</p>
