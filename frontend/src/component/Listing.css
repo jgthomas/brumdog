@@ -3,7 +3,7 @@
         border: 2px solid slategrey;
         border-radius: 5px;
         background-color: white;
-        border-width: 20px;
+        border-width: 12px;
         border-image: url("../assets/bone-border.png") 8% 8% round;
         border-color: white;
 }
