@@ -20,7 +20,6 @@ function Listing(props) {
 }
 
 const listingBoxStyle = {
-    backgroundColor: 'white',
     borderRadius: '5px',
     border: '1px solid slategrey'
 }
