@@ -5,32 +5,10 @@
         src: url('../fonts/animal_tracks.ttf') format('truetype');
 }
 
-.navigation-button {
-        text-align: center;
-}
-
-
 .content-box {
         width: 95%;
         margin: auto;
 }
-
-
-.content-title {
-        color: cornflowerblue;
-        text-align: center;
-}
-
-
-.emphasise {
-        font-weight: bold;
-}
-
-
-.dog-paw {
-        font-family: 'Dingbats';
-}
-
 
 @media only screen and (min-width: 1280px) {
         .content-box {
