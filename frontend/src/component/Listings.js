@@ -10,6 +10,7 @@ import { device } from './device';
 const ListingsWrapper = styled.div`
     width: 95%;
     margin: auto;
+    margin-top: 3em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     grid-auto-rows: 500px;
