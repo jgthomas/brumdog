@@ -40,6 +40,7 @@ const Listings = (props) => (
         {props.pubs.map( pub => {
             return <Listing
                 name={pub.name}
+                location={pub.location}
                 rating={pub.rating}
                 imageName={pub.imageName}
                 description={pub.description}

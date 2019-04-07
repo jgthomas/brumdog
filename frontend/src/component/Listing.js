@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 function Listing(props) {
-    const { name, imageName, rating, description } = props
+    const { name, location, imageName, rating, description } = props
     return (
         <div style={listingBoxStyle}>
             <h1 style={titleStyle}>{name}</h1>
@@ -14,6 +14,7 @@ function Listing(props) {
                 alt={imageAlt}
             />
             <p style={ratingStyle}>{dogPaw.repeat(rating)}</p>
+            <p style={locationStyle}>{location}</p>
             <p style={descriptionStyle}>{description}</p>
         </div>
     );
@@ -42,6 +43,12 @@ const ratingStyle = {
     fontFamily: 'Dingbats',
     textAlign: 'center',
     color: '#E45641'
+}
+
+const locationStyle = {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: 'black'
 }
 
 const descriptionStyle = {
