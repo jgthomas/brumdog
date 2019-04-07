@@ -39,6 +39,8 @@ const navLinkBlockStyle = {
 }
 
 const navLinkStyle = {
+    color: 'dodgerblue',
+    outline: 'none',
     textDecoration: 'none'
 }
 
