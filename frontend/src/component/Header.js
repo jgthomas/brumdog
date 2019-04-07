@@ -2,17 +2,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './Header.css';
 
 class Header extends Component {
     render() {
         return (
-          <div>
-            <h1 className="page-title">{this.props.pageTitle}</h1>
-            <p className="tagline">Drinking with a dog in brum</p>
+          <div style={titleBlockStyle}>
+            <h1 style={titleStyle}>{this.props.pageTitle}</h1>
+            <p style={tagLineStyle}>Drinking with a dog in brum</p>
           </div>
         );
     }
+}
+
+const titleBlockStyle = {
+    color: 'dodgerblue',
+    textAlign: 'center'
+}
+
+const titleStyle = {
+    fontSize: '3em'
+}
+
+const tagLineStyle = {
+    fontStyle: 'italic',
+    fontSize: '1.15em',
+    marginBottom: '0.5em'
 }
 
 Header.propTypes = {
