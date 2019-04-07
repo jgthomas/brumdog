@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 
-import Rating from './Rating';
 import Listings from './Listings';
 
 const getURL = "http://192.168.0.16:5000/load";
