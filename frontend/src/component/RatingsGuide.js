@@ -1,9 +1,11 @@
 
 import React from 'react';
 
+import Rating from './Rating';
+
 
 const RatingsGuide = (props) => (
-    <p>Hello</p>
+    <Rating />
 );
 
 
