@@ -21,10 +21,18 @@ class Content extends Component {
             .then(data => this.setState( { pubs: data } ));
     }
 
+    pubsArray() {
+        return Object.values(this.state.pubs);
+    }
+
+    pubsByRating(rating) {
+        return this.pubsArray().filter(pub => pub.rating >= rating);
+    }
+
     render() {
         return (
             <div>
-                <Listings pubs={Object.values(this.state.pubs)} />
+                <Listings pubs={this.pubsByRating(1)} />
             </div>
         );
     }
