@@ -5,16 +5,17 @@ import PropTypes from 'prop-types';
 import './App.css';
 
 function Listing(props) {
+    const { name, imageName, rating, description } = props
     return (
         <div style={listingBoxStyle}>
-            <h1 style={titleStyle}>{props.name}</h1>
+            <h1 style={titleStyle}>{name}</h1>
             <img
-                src={props.imageName}
+                src={imageName}
                 style={imageStyle}
                 alt={imageAlt}
             />
-            <p style={ratingStyle}>{dogPaw.repeat(props.rating)}</p>
-            <p style={descriptionStyle}>{props.description}</p>
+            <p style={ratingStyle}>{dogPaw.repeat(rating)}</p>
+            <p style={descriptionStyle}>{description}</p>
         </div>
     );
 }
