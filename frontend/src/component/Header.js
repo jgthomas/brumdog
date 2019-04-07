@@ -3,15 +3,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-class Header extends Component {
-    render() {
-        return (
-          <div style={titleBlockStyle}>
-            <h1 style={titleStyle}>{this.props.pageTitle}</h1>
-            <p style={tagLineStyle}>Drinking with a dog in brum</p>
-          </div>
-        );
-    }
+function Header(props) {
+    return (
+        <div style={titleBlockStyle}>
+          <h1 style={titleStyle}>{props.pageTitle}</h1>
+          <p style={tagLineStyle}>Drinking with a dog in brum</p>
+        </div>
+    );
 }
 
 const titleBlockStyle = {
