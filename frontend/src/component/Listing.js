@@ -4,22 +4,19 @@ import PropTypes from 'prop-types';
 
 import './App.css';
 
-class Listing extends Component {
-
-    render() {
+function Listing(props) {
         return (
           <div style={listingBoxStyle}>
-             <h1 style={titleStyle}>{this.props.name}</h1>
+             <h1 style={titleStyle}>{props.name}</h1>
              <img
-                 src={this.props.imageName}
+                 src={props.imageName}
                  style={imageStyle}
                  alt={imageAlt}
              />
-             <p style={ratingStyle}>{dogPaw.repeat(this.props.rating)}</p>
-             <p style={descriptionStyle}>{this.props.description}</p>
+             <p style={ratingStyle}>{dogPaw.repeat(props.rating)}</p>
+             <p style={descriptionStyle}>{props.description}</p>
           </div>
         );
-    }
 }
 
 const listingBoxStyle = {
