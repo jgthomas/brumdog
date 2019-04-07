@@ -33,6 +33,7 @@ const titleStyle = {
 const imageStyle = {
     display: 'block',
     width: '80%',
+    maxWidth: '500px',
     margin: 'auto',
     height: 'auto'
 }
