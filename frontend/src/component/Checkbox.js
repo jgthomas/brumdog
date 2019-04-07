@@ -3,19 +3,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const CheckBox = ({checked}) => (
+const Checkbox = ({checked}) => (
     <div>
         <input type="checkbox" checked={checked} />
     </div>
 );
 
 
-CheckBox.defaultProps = {
+Checkbox.defaultProps = {
     checked: false
 }
 
-CheckBox.propTypes = {
+Checkbox.propTypes = {
     checked: PropTypes.bool
 }
 
-export default CheckBox;
+export default Checkbox;
