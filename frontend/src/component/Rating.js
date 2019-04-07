@@ -1,8 +1,6 @@
 
 import React from 'react';
 
-import './App.css';
-
 
 function Rating(props) {
     return (
@@ -57,5 +55,6 @@ const ratingWordStyle = {
 }
 
 const tagLine = "Our paw scale of dog friendliness";
+
 
 export default Rating;
