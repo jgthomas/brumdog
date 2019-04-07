@@ -2,25 +2,23 @@
 import React from 'react';
 
 
-function Rating(props) {
-    return (
-        <div style={ratingBoxStyle}>
-            <p style={tagLineStyle}>{tagLine}</p>
-            <div style={ratingStyle}>
-                <div style={ratingIconStyle}>
-                    <p>D</p>
-                    <p>DD</p>
-                    <p>DDD</p>
-                </div>
-                <div style={ratingWordStyle}>
-                    <p>tolerated</p>
-                    <p>welcomed</p>
-                    <p>loved</p>
-                </div>
+const Rating = (props) => (
+    <div style={ratingBoxStyle}>
+        <p style={tagLineStyle}>{tagLine}</p>
+        <div style={ratingStyle}>
+            <div style={ratingIconStyle}>
+                <p>D</p>
+                <p>DD</p>
+                <p>DDD</p>
+            </div>
+            <div style={ratingWordStyle}>
+                <p>tolerated</p>
+                <p>welcomed</p>
+                <p>loved</p>
             </div>
         </div>
-    );
-}
+    </div>
+);
 
 const ratingBoxStyle = {
     width: '90%',
