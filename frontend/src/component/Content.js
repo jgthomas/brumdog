@@ -25,7 +25,6 @@ class Content extends Component {
     render() {
         return (
             <div>
-                <Rating />
                 <Listings pubs={Object.values(this.state.pubs)} />
             </div>
         );
