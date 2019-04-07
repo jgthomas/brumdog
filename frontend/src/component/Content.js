@@ -29,10 +29,16 @@ class Content extends Component {
         return this.pubsArray().filter(pub => pub.rating >= rating);
     }
 
+    pubsByLocation(location) {
+        return this.pubsArray().filter(pub =>
+            pub.location.toLowerCase() === location.toLowerCase()
+        );
+    }
+
     render() {
         return (
             <div>
-                <Listings pubs={this.pubsByRating(1)} />
+                <Listings pubs={this.pubsArray()} />
             </div>
         );
     }
