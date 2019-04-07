@@ -31,7 +31,7 @@ def get_db(db_name):
     return Database(db_name)
 
 
-def build_image_url(image):
+def build_image_url(image, name):
     if image is None:
         image_url = "".join([URL, IMAGES, set_image_name(name), FILETYPE])
     else:
@@ -39,17 +39,17 @@ def build_image_url(image):
     return image_url
 
 
-def add_pub(db_name, name, description, rating, image=None):
+def add_pub(db_name, name, location, description, rating, image=None):
     db = get_db(db_name)
     db.execute(CREATE_DOG_PUBS)
-    image_url = build_image_url(image)
-    db.execute(INSERT_PUB, name, description, rating, image_url)
+    image_url = build_image_url(image, name)
+    db.execute(INSERT_PUB, name, location, description, rating, image_url)
 
 
-def update_pub(db_name, pub_id, name, description, rating, image=None):
+def update_pub(db_name, pub_id, name, location, description, rating, image=None):
     db = get_db(db_name)
-    image_url = build_image_url(image)
-    db.execute(UPDATE_PUB, name, description, rating, image_url, pub_id);
+    image_url = build_image_url(image, name)
+    db.execute(UPDATE_PUB, name, location, description, rating, image_url, pub_id);
 
 
 '''
@@ -75,12 +75,16 @@ Sub-form for submitting a new pub
 def add():
     if request.method == "POST":
         name = None
+        location = None
         rating = None
         description = None
         image_name = "placeholder"
 
         if request.form.get("name"):
             name = request.form.get("name")
+
+        if request.form.get("location"):
+            location = request.form.get("location")
 
         if request.form.get("description"):
             description = request.form.get("description")
@@ -93,7 +97,7 @@ def add():
         #    image_name = set_image_name(name)
 
         if name and (rating and description):
-            add_pub("brumdog.db", name, description, rating, image_name)
+            add_pub("brumdog.db", name, location, description, rating, image_name)
     return render_template("form.html")
 
 
@@ -138,6 +142,7 @@ TODO: Submits updated pub details to the database
 def update_pub_details():
     if request.method == "POST":
         name = None
+        location = None
         rating = None
         description = None
         image_name = "placeholder"
@@ -146,6 +151,9 @@ def update_pub_details():
         if request.form.get("name"):
             name = request.form.get("name")
 
+        if request.form.get("location"):
+            location = request.form.get("location")
+
         if request.form.get("description"):
             description = request.form.get("description")
 
@@ -153,7 +161,7 @@ def update_pub_details():
             rating = ratings[request.form.get("rating")]
 
         if name and (rating and description):
-            update_pub("brumdog.db", pub_id, name, description, rating, image_name)
+            update_pub("brumdog.db", pub_id, name, location, description, rating, image_name)
     return redirect(url_for("edit"))
 
 
@@ -169,17 +177,19 @@ def load():
     return jsonify(pubs)
 
 
-#@app.route('/add')
-#def add_db_pubs():
-#    add_pub("brumdog.db",
-#            "Pug-on-Tap",
-#            "A quaint, old-time boozer where the only thing to fear is the locals",
-#            1)
-#    add_pub("brumdog.db",
-#            "Horse and Hound",
-#            "Avoid the food, I'm sure your dog will like it though!",
-#            2)
-#    return "Done!"
+@app.route('/populate')
+def add_db_pubs():
+    add_pub("brumdog.db",
+            "Pug-on-Tap",
+            "Digbeth",
+            "A quaint, old-time boozer where the only thing to fear is the locals",
+            1)
+    add_pub("brumdog.db",
+            "Horse and Hound",
+            "Stirchley",
+            "Avoid the food, I'm sure your dog will like it though!",
+            2)
+    return "Done!"
 #
 #
 #@app.route('/show', methods=["GET"])

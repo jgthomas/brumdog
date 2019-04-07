@@ -2,13 +2,14 @@
 CREATE_DOG_PUBS = """CREATE TABLE IF NOT EXISTS dog_pubs (
                          id          INTEGER PRIMARY KEY NOT NULL,
                          name        TEXT NOT NULL,
+                         location    TEXT NOT NULL,
                          description TEXT NOT NULL,
                          rating      INTEGER NOT NULL,
                          imageName   TEXT NOT NULL)"""
 
 
-INSERT_PUB = """INSERT INTO dog_pubs (name, description, rating, imageName)
-                     VALUES (?,?,?,?)"""
+INSERT_PUB = """INSERT INTO dog_pubs (name, location, description, rating, imageName)
+                     VALUES (?,?,?,?,?)"""
 
 SELECT_ALL_PUBS = """SELECT *
                        FROM dog_pubs"""
@@ -23,6 +24,7 @@ SELECT_BY_ID = """SELECT *
 
 UPDATE_PUB = """UPDATE dog_pubs
                    SET name=?,
+                       location=?,
                        description=?,
                        rating=?,
                        imageName=?
