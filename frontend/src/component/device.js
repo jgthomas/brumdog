@@ -6,11 +6,9 @@ const size = {
     desktopHuge: "2450px"
 }
 
-const device = {
+export const device = {
     laptopLarge: `(min-width: ${size.laptopLarge})`,
     laptopHuge: `(min-width: ${size.laptopHuge})`,
     desktopLarge: `(min-width: ${size.desktopLarge})`,
     desktopHuge: `(min-width: ${size.desktopHuge})`
 }
-
-export device;
