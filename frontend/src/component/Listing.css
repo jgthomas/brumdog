@@ -1,11 +1,10 @@
-
+/*
 .listing-box {
         border: 2px solid slategrey;
         border-radius: 5px;
         background-color: white;
         border-width: 3px;
         border-image: url("../assets/bone-border.png") 5% 5% round;
-        /*border-color: slategrey;*/
 }
 
 .listing-title {
@@ -35,4 +34,4 @@ img {
         width: 90%;
         margin: auto;
         color: dimgrey;
-}
+}*/
