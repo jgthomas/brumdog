@@ -5,18 +5,18 @@ import PropTypes from 'prop-types';
 import './App.css';
 
 function Listing(props) {
-        return (
-          <div style={listingBoxStyle}>
-             <h1 style={titleStyle}>{props.name}</h1>
-             <img
-                 src={props.imageName}
-                 style={imageStyle}
-                 alt={imageAlt}
-             />
-             <p style={ratingStyle}>{dogPaw.repeat(props.rating)}</p>
-             <p style={descriptionStyle}>{props.description}</p>
-          </div>
-        );
+    return (
+        <div style={listingBoxStyle}>
+            <h1 style={titleStyle}>{props.name}</h1>
+            <img
+                src={props.imageName}
+                style={imageStyle}
+                alt={imageAlt}
+            />
+            <p style={ratingStyle}>{dogPaw.repeat(props.rating)}</p>
+            <p style={descriptionStyle}>{props.description}</p>
+        </div>
+    );
 }
 
 const listingBoxStyle = {
