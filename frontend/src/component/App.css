@@ -4,32 +4,3 @@
         font-style: normal;
         src: url('../fonts/animal_tracks.ttf') format('truetype');
 }
-
-.content-box {
-        width: 95%;
-        margin: auto;
-}
-
-@media only screen and (min-width: 1280px) {
-        .content-box {
-                width: 70%;
-        }
-}
-
-@media only screen and (min-width: 1600px) {
-        .content-box {
-                width: 60%;
-        }
-}
-
-@media only screen and (min-width: 1920px) {
-        .content-box {
-                width: 50%;
-        }
-}
-
-@media only screen and (min-width: 2450px) {
-        .content-box {
-                width: 40%;
-        }
-}
