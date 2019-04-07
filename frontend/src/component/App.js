@@ -10,7 +10,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="app-wrapper">
+      <div>
         <Header pageTitle="BrumDog" />
         <Content />
       </div>
