@@ -7,7 +7,7 @@ function Header(props) {
     return (
         <div style={titleBlockStyle}>
           <h1 style={titleStyle}>{props.pageTitle}</h1>
-          <p style={tagLineStyle}>Drinking with a dog in brum</p>
+          <p style={tagLineStyle}>{tagLine}</p>
         </div>
     );
 }
@@ -26,6 +26,8 @@ const tagLineStyle = {
     fontSize: '1.15em',
     marginBottom: '0.5em'
 }
+
+const tagLine = "Drinking with a dog in brum";
 
 Header.propTypes = {
     pageTitle: PropTypes.string,
