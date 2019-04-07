@@ -6,8 +6,8 @@ import Listings from './Listings';
 
 const getURL = "http://192.168.0.16:5000/load";
 
-class Content extends Component {
 
+class Content extends Component {
     constructor(props) {
         super(props);
 
@@ -31,5 +31,6 @@ class Content extends Component {
         );
     }
 }
+
 
 export default Content;

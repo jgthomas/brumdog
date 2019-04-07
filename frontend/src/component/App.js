@@ -6,8 +6,8 @@ import Content from './Content';
 
 import './App.css';
 
-class App extends Component {
 
+class App extends Component {
   render() {
     return (
       <div className="app-wrapper">
@@ -17,5 +17,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
