@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Listings from './Listings';
 
-const getURL = "http://192.168.0.16:5000/load";
+const getURL = "http://192.168.0.159:5000/load";
 
 
 class Content extends Component {
